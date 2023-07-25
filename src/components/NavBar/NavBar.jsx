@@ -2,7 +2,6 @@ import pageTurnerLogo2 from "../images/pageTurnersLogo2.png";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
-import { BASE_URL } from "../api-handlers";
 
 const NavBar = (props) => {
   const navigate = useNavigate();
@@ -13,7 +12,7 @@ const NavBar = (props) => {
     localStorage.clear();
     props.setIsLoggedIn(false);
     // HEY KIDS CHANGE THIS BEFORE DEPLOYING!!!
-    window.location.href = "https://main.d2t4p7pc5iy3t6.amplifyapp.com/logout";
+    window.location.href = "https://pageturners-backend.onrender.com/logout";
     //"http://localhost:3000/logout";
     navigate("/");
   };

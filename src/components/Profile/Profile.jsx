@@ -5,16 +5,11 @@ import { fetchUserById } from "../api-handlers";
 import MyReviews from "./MyReviews";
 import { DoorBack } from "@mui/icons-material";
 
-function Profile({
-  books,
-  myUserId,
-  isLoggedIn,
-  setIsLoggedIn,
-  reviews}) {
+function Profile({ books, myUserId, isLoggedIn, setIsLoggedIn, reviews }) {
   const [user, setUser] = useState(null);
   const cookieId = localStorage.getItem("userId");
 
-  const adminUrl = "https://resplendent-starburst-609792.netlify.app/";
+  const adminUrl = "https://pageturners-admin.netlify.app";
 
   useEffect(() => {
     const altFetchData = async () => {
@@ -60,7 +55,8 @@ function Profile({
         myUserId={myUserId}
         isLoggedIn={isLoggedIn}
         setIsLoggedIn={setIsLoggedIn}
-        reviews={reviews} />
+        reviews={reviews}
+      />
 
       <div className="flex justify-center">
         <div className="flex mx-28">
@@ -109,7 +105,6 @@ function Profile({
             </div>
           )}
         </div>
-
       </div>
     </>
   );
